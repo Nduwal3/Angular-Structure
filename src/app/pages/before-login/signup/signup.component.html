@@ -1,0 +1,99 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>Sign Up</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <form [formGroup]="signupForm" (ngSubmit)="onFormSubmit(signupForm)">
+      <mat-form-field>
+        <mat-label>Username</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="username"
+          placeholder="username"
+        />
+        <mat-error *ngIf="formSubmitted && signupValue.username.errors as err">
+          <span *ngIf="err?.required">
+            Username is <strong>required</strong>
+          </span>
+          <span *ngIf="err?.minlength">
+            Username must be atleast
+            <strong>{{ err?.minlength?.requiredLength }}</strong> characters
+          </span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Firstname</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="firstname"
+          placeholder="Firstname"
+        />
+        <mat-error *ngIf="formSubmitted && signupValue.firstname.errors as err">
+          <span *ngIf="err?.required">
+            Firstname is <strong>required</strong>
+          </span>
+          <span *ngIf="err?.minlength">
+            Firstname must be atleast
+            <strong>{{ err?.minlength?.requiredLength }}</strong> characters
+          </span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Lastname</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="lastname"
+          placeholder="Lastname"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Email</mat-label>
+        <input
+          type="email"
+          matInput
+          formControlName="email"
+          placeholder="Email"
+        />
+        <mat-error *ngIf="formSubmitted && signupValue.email.errors as err">
+          <span *ngIf="err.email">Please enter a valid email address</span>
+          <span *ngIf="err.required"> Email is <strong>required</strong></span>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Phone</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="phone"
+          placeholder="Phone"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Password</mat-label>
+        <input
+          type="password"
+          matInput
+          formControlName="password"
+          placeholder="Password"
+        />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Confirm Password</mat-label>
+        <input
+          type="password"
+          matInput
+          formControlName="confirmPassword"
+          placeholder="Confirm Password"
+        />
+      </mat-form-field>
+      <button mat-button type="submit" color="primary">Sign Up</button>
+    </form>
+  </mat-card-content>
+  <mat-card-actions>
+    <!-- <button mat-button type="submit" color="primary">Sign Up</button> -->
+    <!-- <button mat-button>SHARE</button> -->
+  </mat-card-actions>
+</mat-card>

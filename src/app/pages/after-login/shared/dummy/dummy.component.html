@@ -1,0 +1,7 @@
+<div
+  class="dummy-paragraph"
+  [ngStyle]="{ 'border-color': type == 'error' ? 'red' : '' }"
+  [ngClass]="{ error: type == 'error', success: type == 'success' }"
+>
+  <ng-content></ng-content>
+</div>

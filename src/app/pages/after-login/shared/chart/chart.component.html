@@ -1,0 +1,18 @@
+<div class="card">
+  <div class="header">Day Count: {{ days }}</div>
+  <div class="card-body">Week Count : {{ week }}</div>
+
+  <button
+    class="btn"
+    (click)="updateCount()"
+    [ngStyle]="{ 'background-color': days > 10 ? 'red' : 'green' }"
+  >
+    View More...
+  </button>
+</div>
+
+<app-dummy type="error">
+  Generate Lorem Ipsum placeholder text for use in your graphic, print and web
+  layouts, and discover plugins for your favorite writing, design and blogging
+  tools.ipsum
+</app-dummy>
