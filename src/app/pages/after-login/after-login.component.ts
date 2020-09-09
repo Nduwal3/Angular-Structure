@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-after-login',
-  template: '<router-outlet></router-outlet>',
+  template: '<app-header></app-header><app-sidenav></app-sidenav>',
 })
 export class AfterLoginComponent {}

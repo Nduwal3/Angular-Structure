@@ -14,14 +14,6 @@ const ACCESS_TOKEN = environment.access_token;
 export class AuthService {
   constructor(private http: HttpClient) {}
 
-  // protected httpOptions = {
-
-  //   headers: new HttpHeaders().set(
-  //     'Content-Type',
-  //     'application/x-www-form-urlencoded'
-  //   ),
-  // };
-
   protected httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/JSON',
@@ -55,10 +47,10 @@ export class AuthService {
   }
 
   get getToken() {
-    return AUTHCONSTANTS.ACCESS_TOKEN;
+    return localStorage.getItem(AUTHCONSTANTS.ACCESS_TOKEN);
   }
 
   isLoggedIn(): boolean {
-    return AUTHCONSTANTS.ACCESS_TOKEN ? true : false;
+    return this.getToken ? true : false;
   }
 }

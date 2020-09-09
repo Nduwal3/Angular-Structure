@@ -4,19 +4,19 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HeaderComponent } from './shared/header/header.component';
-import { FooterComponent } from './shared/footer/footer.component';
 
 import { MATERIAL_IMPORT } from './pages/material-import';
-const SHARED_COMPONENT = [HeaderComponent, FooterComponent];
+import { CoreModule } from './@core/core.module';
+// const SHARED_COMPONENT = [HeaderComponent, FooterComponent];
 
 @NgModule({
-  declarations: [AppComponent, ...SHARED_COMPONENT],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MATERIAL_IMPORT,
+    CoreModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

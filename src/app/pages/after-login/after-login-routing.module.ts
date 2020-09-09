@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { FeedComponent } from './feed/feed.component';
 import { PageNotFoundComponent } from '../../shared/page-not-found/page-not-found.component';
+import { NepalCaseSummaryComponent } from './nepal-case-summary/nepal-case-summary.component';
 
 const ROUTES: Routes = [
   {
@@ -22,6 +23,10 @@ const ROUTES: Routes = [
       {
         path: 'feed',
         component: FeedComponent,
+      },
+      {
+        path: 'nepal-cases-summary',
+        component: NepalCaseSummaryComponent,
       },
     ],
   },

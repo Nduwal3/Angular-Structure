@@ -2,10 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingComponent } from './landing/landing.component';
 import { BeforeLoginComponent } from './before-login.component';
-import { LoginComponent } from './login/login.component';
-import { SignupComponent } from './signup/signup.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { PageNotFoundComponent } from '../../shared/page-not-found/page-not-found.component';
+import { GuestGuardService } from 'src/app/@core/shared/services';
 
 const ROUTES: Routes = [
   {
@@ -13,26 +11,16 @@ const ROUTES: Routes = [
     component: BeforeLoginComponent,
     children: [
       {
-        path: 'landing',
+        path: 'auth',
+        loadChildren: () =>
+          import('./auth/auth.module').then((m) => m.AuthModule),
+        canActivate: [GuestGuardService],
+      },
+      {
+        path: '',
         component: LandingComponent,
       },
-      {
-        path: 'login',
-        component: LoginComponent,
-      },
-      {
-        path: 'signup',
-        component: SignupComponent,
-      },
-      {
-        path: 'reset',
-        component: ResetPasswordComponent,
-      },
     ],
-  },
-  {
-    path: '',
-    redirectTo: 'landing',
   },
   {
     path: '**',

@@ -1,1 +1,29 @@
-<p>feed works!</p>
+<div class="row">
+  <mat-card>
+    <mat-card-content> quarantined</mat-card-content>
+    <mat-card-content> {{ data?.quarantined }}</mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-content> Recovered</mat-card-content>
+    <mat-card-content> {{ data?.recovered }}</mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-content> tested Negative</mat-card-content>
+    <mat-card-content> {{ data?.tested_negative }}</mat-card-content>
+  </mat-card>
+</div>
+<br />
+<div class="row">
+  <mat-card>
+    <mat-card-content> tested Positive</mat-card-content>
+    <mat-card-content> {{ data?.tested_positive }}</mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-content> tested RDT</mat-card-content>
+    <mat-card-content> {{ data?.tested_rdt }}</mat-card-content>
+  </mat-card>
+  <mat-card>
+    <mat-card-content> tested total</mat-card-content>
+    <mat-card-content> {{ data?.tested_total }}</mat-card-content>
+  </mat-card>
+</div>

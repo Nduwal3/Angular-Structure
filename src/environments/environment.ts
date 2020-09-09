@@ -5,6 +5,8 @@
 export const environment = {
   production: false,
   base_url: 'http://localhost:3000/v1/',
+  nepal_corona_url: 'https://nepalcorona.info/api/v1/',
+  data_nepal_corona_url: 'https://data.nepalcorona.info/api/v1/',
   access_token: '1234567899',
 };
 

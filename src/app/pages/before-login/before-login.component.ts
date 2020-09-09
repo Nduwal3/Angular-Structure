@@ -2,6 +2,6 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-before-login',
-  template: '<router-outlet></router-outlet>',
+  template: '<app-header></app-header><router-outlet></router-outlet>',
 })
 export class BeforeLoginComponent {}

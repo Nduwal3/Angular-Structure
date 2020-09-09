@@ -1,15 +1,19 @@
 export const MENU_ITEMS = [
   {
-    text: 'Login',
-    path: 'login/',
+    text: 'Profile',
+    path: '/user/profile',
   },
   {
     text: 'Dashboard',
-    path: 'user/dashboard/',
+    path: '/user/dashboard',
   },
   {
-    text: 'Sign Up',
-    path: 'signup/',
+    text: 'Feed',
+    path: '/user/feed',
+  },
+  {
+    text: 'Nepal Cases Summary',
+    path: '/user/nepal-cases-summary',
   },
   // {
   //     text:'Login',
