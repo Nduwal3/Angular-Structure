@@ -20,7 +20,6 @@ export class NepalCaseSummaryComponent implements OnInit {
     this.nepalCoronaService
       .getNepalDetailedCasesSummaryData()
       .subscribe(async (data) => {
-        // console.log(data);
         this.ndcsData = data;
 
         if (data && data.province) {
@@ -39,15 +38,11 @@ export class NepalCaseSummaryComponent implements OnInit {
 
       for (let key in provinceData) {
         provinceData[key].map((value) => {
-          console.log(key, value);
           provinceNames.map((name) => {
             if (name === value.province) {
               if (!this.provinceCaseSummary[name]) {
                 this.provinceCaseSummary[name] = {};
               }
-
-              console.log(key);
-              console.log(value);
 
               // let data = {};
 

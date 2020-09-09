@@ -1,15 +1,28 @@
 <mat-toolbar color="primary">
+  <button
+    *ngIf="isLoggedIn"
+    mat-icon-button
+    class="example-icon"
+    aria-label="Example icon-button with menu icon"
+    (click)="toggle()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
   <mat-form-field floatLabel="never">
     <input type="text" matInput placeholder="Search" />
     <i matSuffix class="material-icons">search</i>
   </mat-form-field>
   <span class="example-spacer"></span>
   <div *ngIf="!isLoggedIn">
-    <button mat-raised-button color="accent" (click)="login()">Login</button>
-    <button mat-raised-button color="accent" (click)="signup()">Sign Up</button>
+    <button mat-raised-button color="accent" routerLink="/auth/login">
+      Login
+    </button>
+    <a mat-raised-button color="accent" routerLink="/auth/signup">Sign Up</a>
   </div>
   <div *ngIf="isLoggedIn">
-    <button mat-raised-button color="accent" (click)="logout()">Logout</button>
-    <button mat-raised-button color="accent">Profile</button>
+    <a mat-raised-button routerLink="" color="accent" (click)="logout()"
+      >Logout</a
+    >
+    <a mat-raised-button color="accent">Profile</a>
   </div>
 </mat-toolbar>

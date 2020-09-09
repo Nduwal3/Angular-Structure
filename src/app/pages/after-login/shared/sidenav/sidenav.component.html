@@ -1,3 +1,4 @@
+<app-header (toggleSidenav)="sidenav.toggle()"></app-header>
 <mat-sidenav-container class="example-container">
   <mat-sidenav
     #sidenav
@@ -20,9 +21,9 @@
 
   <mat-sidenav-content>
     <!-- <p><mat-checkbox [(ngModel)]="opened">sidenav.opened</mat-checkbox></p> -->
-    <p>
+    <!-- <p>
       <button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button>
-    </p>
+    </p> -->
     <div class="app-content">
       <router-outlet></router-outlet>
       <app-footer></app-footer>
