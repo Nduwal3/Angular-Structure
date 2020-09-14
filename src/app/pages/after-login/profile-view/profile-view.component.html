@@ -1,1 +1,5 @@
 <p>profile-view works!</p>
+<mat-card *ngFor="let repo of repos | async">
+  {{ repo.name }}
+  {{ repo.description }}
+</mat-card>

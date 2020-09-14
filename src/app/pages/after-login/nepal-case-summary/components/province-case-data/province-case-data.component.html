@@ -1,0 +1,9 @@
+<h2 class="title">Province Data</h2>
+<div class="main">
+  <mat-card *ngFor="let provinceData of provinceCaseSummary | keyvalue">
+    <h2>Province {{ provinceData.key }}</h2>
+    <div *ngFor="let pd of provinceData.value | keyvalue">
+      <strong>{{ pd.key }}</strong> {{ pd.value }}
+    </div>
+  </mat-card>
+</div>

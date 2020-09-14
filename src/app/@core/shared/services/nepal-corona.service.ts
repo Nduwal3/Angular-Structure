@@ -6,6 +6,7 @@ import {
   NepalCoronaInfoUrlConstant,
   DataNepalCoronaInfoUrlConstant,
 } from '../constants';
+import { retry, catchError } from 'rxjs/operators';
 
 const BASE_URL = environment.nepal_corona_url;
 const BASE_DATA_URL = environment.data_nepal_corona_url;
@@ -26,8 +27,9 @@ export class NepalCoronaService {
   constructor(private http: HttpClient) {}
 
   getNepalTestingSummaryData(): Observable<any> {
-    return this.http.get(`${BASE_URL}${this.NCIurl.nepalTestingSummary}`);
-    // .pipe(retry(1), catchError(this.errorHandle));
+    return this.http
+      .get(`${BASE_URL}${this.NCIurl.nepalTestingSummary}`)
+      .pipe(retry(1), catchError(this.errorHandle));
   }
 
   getNepalDetailedCasesSummaryData(): Observable<any> {

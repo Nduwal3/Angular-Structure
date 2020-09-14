@@ -9,20 +9,17 @@ import { AfterLoginRoutingModule } from './after-login-routing.module';
 import { AfterLoginComponent } from './after-login.component';
 import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { SharedModule } from 'src/app/shared/shared.module';
-import { NepalCaseSummaryComponent } from './nepal-case-summary/nepal-case-summary.component';
+import { ProfileViewComponent } from './profile-view/profile-view.component';
+import { NepalCaseSummaryModule } from './nepal-case-summary/nepal-case-summary.module';
 
 const PAGE_COMPONENTS = [
   AfterLoginComponent,
   DashboardComponent,
   FeedComponent,
+  ProfileViewComponent,
 ];
 
-const SHARED_COMPONENTS = [
-  ChartComponent,
-  DummyComponent,
-  SidenavComponent,
-  NepalCaseSummaryComponent,
-];
+const SHARED_COMPONENTS = [ChartComponent, DummyComponent, SidenavComponent];
 
 @NgModule({
   declarations: [...PAGE_COMPONENTS, ...SHARED_COMPONENTS],
@@ -31,6 +28,7 @@ const SHARED_COMPONENTS = [
     ...MATERIAL_IMPORT,
     AfterLoginRoutingModule,
     SharedModule,
+    NepalCaseSummaryModule,
   ],
   providers: [],
 })

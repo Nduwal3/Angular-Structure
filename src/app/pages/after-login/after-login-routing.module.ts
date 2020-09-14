@@ -25,6 +25,10 @@ const ROUTES: Routes = [
         component: FeedComponent,
       },
       {
+        path: 'profile',
+        component: ProfileViewComponent,
+      },
+      {
         path: 'nepal-cases-summary',
         component: NepalCaseSummaryComponent,
       },

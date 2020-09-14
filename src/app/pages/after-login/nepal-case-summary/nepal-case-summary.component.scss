@@ -1,5 +1,21 @@
-.mat-card {
-  width: 20%;
-  margin: 10px;
-  float: left;
+::ng-deep {
+  .title {
+    margin: 10px 0;
+  }
+
+  .main {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main .mat-card:nth-child(4n) {
+    margin-right: 0;
+  }
+
+  .mat-card {
+    width: calc((100% - (15px * 3)) / 4);
+    box-sizing: border-box;
+    margin-right: 15px;
+    margin-top: 5px;
+  }
 }
