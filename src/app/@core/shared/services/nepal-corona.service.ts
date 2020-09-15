@@ -38,6 +38,12 @@ export class NepalCoronaService {
     );
   }
 
+  getDistrictList(): Observable<any> {
+    return this.http
+      .get(`${BASE_DATA_URL}${this.DNCIurl.districtList}`)
+      .pipe(retry(1), catchError(this.errorHandle));
+  }
+
   errorHandle({ error }) {
     if (error.error && error.message) {
       return throwError(error.message);

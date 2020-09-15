@@ -1,0 +1,8 @@
+<div class="main">
+  <mat-card *ngFor="let data of result | keyvalue">
+    <h2>{{ caseKey }} {{ data.key }}</h2>
+    <div *ngFor="let pd of data.value | keyvalue">
+      <strong>{{ pd.key }}</strong> {{ pd.value }}
+    </div>
+  </mat-card>
+</div>

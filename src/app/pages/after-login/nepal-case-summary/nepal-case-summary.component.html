@@ -1,4 +1,2 @@
-<app-covid-case [caseData]="caseData"></app-covid-case>
-
-<app-province-case-data [provinceData]="provinceData"></app-province-case-data>
-<app-district-case-data [districtData]="districtData"></app-district-case-data>
+<app-covid-case [caseData]="provinceData" caseKey="province"></app-covid-case>
+<app-covid-case [caseData]="districtData" caseKey="district"></app-covid-case>
