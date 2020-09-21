@@ -1,4 +1,4 @@
-import { Component, Input, OnChanges } from '@angular/core';
+import { Component, ContentChild, Input, OnChanges, TemplateRef } from '@angular/core';
 import { NepalCaseSummaryService } from '../../services/nepal-case-summary.service';
 
 @Component({
@@ -7,6 +7,7 @@ import { NepalCaseSummaryService } from '../../services/nepal-case-summary.servi
   styleUrls: ['./district-case-data.component.scss'],
 })
 export class DistrictCaseDataComponent implements OnChanges {
+  @ContentChild(TemplateRef) templateRef;
   @Input() districtData;
   districtCaseSummary = {};
 

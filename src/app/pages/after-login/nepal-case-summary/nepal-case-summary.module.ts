@@ -7,11 +7,13 @@ import { NepalCaseSummaryService } from './services/nepal-case-summary.service';
 import { ProvinceCaseDataComponent } from '../nepal-case-summary/components/province-case-data/province-case-data.component';
 import { DistrictCaseDataComponent } from '../nepal-case-summary/components/district-case-data/district-case-data.component';
 import { CovidCaseComponent } from './components/covid-case/covid-case.component';
+import { DistrictListComponent } from '../district-list/district-list.component';
 
 const PAGE_COMPONENTS = [
   NepalCaseSummaryComponent,
   ProvinceCaseDataComponent,
   DistrictCaseDataComponent,
+  DistrictListComponent,
 ];
 
 const SHARED_COMPONENTS = [];
@@ -20,5 +22,6 @@ const SHARED_COMPONENTS = [];
   declarations: [...PAGE_COMPONENTS, CovidCaseComponent],
   imports: [CommonModule, ...MATERIAL_IMPORT],
   providers: [NepalCaseSummaryService],
+  exports: [],
 })
 export class NepalCaseSummaryModule {}

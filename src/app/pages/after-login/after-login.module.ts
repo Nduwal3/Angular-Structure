@@ -11,14 +11,12 @@ import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { NepalCaseSummaryModule } from './nepal-case-summary/nepal-case-summary.module';
-import { DistrictListComponent } from './district-list/district-list.component';
 
 const PAGE_COMPONENTS = [
   AfterLoginComponent,
   DashboardComponent,
   FeedComponent,
   ProfileViewComponent,
-  DistrictListComponent,
 ];
 
 const SHARED_COMPONENTS = [ChartComponent, DummyComponent, SidenavComponent];
@@ -33,5 +31,6 @@ const SHARED_COMPONENTS = [ChartComponent, DummyComponent, SidenavComponent];
     NepalCaseSummaryModule,
   ],
   providers: [],
+  exports: [],
 })
 export class AfterLoginModule {}

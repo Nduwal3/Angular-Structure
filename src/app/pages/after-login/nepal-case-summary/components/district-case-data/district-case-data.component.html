@@ -1,8 +1,11 @@
-<p>district-case-data works!</p>
+<h2>District Data</h2>
 
 <div class="main">
   <mat-card *ngFor="let districtData of districtCaseSummary | keyvalue">
-    <h2>District {{ districtData.key }}</h2>
+    <!-- <h2>District {{ districtData.key }}</h2> -->
+
+    <app-district-list [districtId]="districtData.key"></app-district-list>
+
     <div *ngFor="let pd of districtData.value | keyvalue">
       <strong>{{ pd.key }}</strong> {{ pd.value }}
     </div>
