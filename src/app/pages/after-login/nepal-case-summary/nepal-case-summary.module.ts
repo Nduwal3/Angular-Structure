@@ -22,6 +22,6 @@ const SHARED_COMPONENTS = [];
   declarations: [...PAGE_COMPONENTS, CovidCaseComponent],
   imports: [CommonModule, ...MATERIAL_IMPORT],
   providers: [NepalCaseSummaryService],
-  exports: [],
+  exports: [DistrictListComponent],
 })
 export class NepalCaseSummaryModule {}

@@ -13,4 +13,5 @@ export const NepalCoronaInfoUrlConstant = {
 export const DataNepalCoronaInfoUrlConstant = {
   detailedCasesSummary: 'covid/summary',
   districtList: 'districts',
+  casesTimeLine: 'covid/timeline',
 };

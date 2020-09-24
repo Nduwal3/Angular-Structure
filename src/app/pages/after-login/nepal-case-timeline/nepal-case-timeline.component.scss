@@ -1,0 +1,83 @@
+.mat-card {
+  // width: 100%;
+  max-width: none;
+}
+.mat-card-title {
+  display: flex;
+  justify-content: space-between;
+
+  .todo-date-picker {
+    width: 70px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    display: inline-block;
+    line-height: 36px;
+    padding: 0 16px;
+    text-align: center;
+    border-radius: 10px;
+    color: inherit;
+    font-size: 14px;
+    font-weight: 500;
+  }
+}
+
+::ng-deep {
+  .mat-card {
+    .mat-card-header-text {
+      width: 100%;
+    }
+  }
+}
+.box {
+  min-width: 100px;
+  padding: 20px;
+  &-holder {
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    * {
+      text-align: center;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    &:not(:last-child) {
+      &:after {
+        content: "";
+        position: absolute;
+        width: 200px;
+        height: 2px;
+        background-color: grey;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+
+  &.case {
+    p {
+      color: blue;
+    }
+  }
+
+  &.active-case {
+    p {
+      color: purple;
+    }
+  }
+
+  &.death {
+    p {
+      color: red;
+    }
+  }
+
+  &.recover {
+    p {
+    }
+  }
+}

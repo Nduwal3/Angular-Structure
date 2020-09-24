@@ -1,0 +1,62 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>
+      <div class="left">
+        <h2>Case of {{ timelineDayData?.date }}</h2>
+      </div>
+      <div class="right">
+        <button mat-button (click)="getData('today')">Today</button>
+        <button mat-button (click)="getData('yesterday')">Yesterday</button>
+        <button mat-button (click)="getData('3days')">3 days ago</button>
+        <!-- <input matInput class="todo-date-picker" (click)="picker.open()" /> -->
+        <input
+          matInput
+          #date
+          class="todo-date-picker"
+          [matDatepicker]="picker"
+          (click)="picker.open()"
+          placeholder="Choose a date"
+          (dateChange)="onDateChange(date.value)"
+        />
+        <mat-datepicker #picker></mat-datepicker>
+      </div>
+    </mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="box-holder">
+      <div class="box case">
+        <h2>New Cases</h2>
+        <p>{{ timelineDayData?.newCases }}</p>
+      </div>
+      <div class="box death">
+        <h2>New Deaths</h2>
+        <p>{{ timelineDayData?.newDeaths }}</p>
+      </div>
+      <div class="box recover">
+        <h2>New Recoveries</h2>
+        <p>{{ timelineDayData?.newRecoveries }}</p>
+      </div>
+    </div>
+
+    <div class="box-holder">
+      <div class="box active-case">
+        <h2>Total Active Cases</h2>
+        <p>
+          {{ timelineDayData?.totalCases - timelineDayData?.totalRecoveries }}
+        </p>
+      </div>
+      <div class="box total-case">
+        <h2>Total Cases</h2>
+        <p>{{ timelineDayData?.totalCases }}</p>
+      </div>
+      <div class="box total-death">
+        <h2>Total Death</h2>
+        <p>{{ timelineDayData?.totalDeaths }}</p>
+      </div>
+      <div class="box">
+        <h2>Total Recoveries</h2>
+        <p>{{ timelineDayData?.totalRecoveries }}</p>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>

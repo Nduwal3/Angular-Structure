@@ -20,6 +20,6 @@ export class DistrictListComponent implements OnInit {
     this.districtNameData = this.getNameService.getDistrictNames(
       this.districtId
     );
-    console.log(this.districtNameData);
+    // console.log(this.districtNameData);
   }
 }

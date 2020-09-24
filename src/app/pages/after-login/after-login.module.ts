@@ -11,6 +11,8 @@ import { SidenavComponent } from './shared/sidenav/sidenav.component';
 import { SharedModule } from 'src/app/shared/shared.module';
 import { ProfileViewComponent } from './profile-view/profile-view.component';
 import { NepalCaseSummaryModule } from './nepal-case-summary/nepal-case-summary.module';
+import { NepalCaseTimelineComponent } from './nepal-case-timeline/nepal-case-timeline.component';
+import { FormsModule } from '@angular/forms';
 
 const PAGE_COMPONENTS = [
   AfterLoginComponent,
@@ -22,13 +24,18 @@ const PAGE_COMPONENTS = [
 const SHARED_COMPONENTS = [ChartComponent, DummyComponent, SidenavComponent];
 
 @NgModule({
-  declarations: [...PAGE_COMPONENTS, ...SHARED_COMPONENTS],
+  declarations: [
+    ...PAGE_COMPONENTS,
+    ...SHARED_COMPONENTS,
+    NepalCaseTimelineComponent,
+  ],
   imports: [
     CommonModule,
     ...MATERIAL_IMPORT,
     AfterLoginRoutingModule,
     SharedModule,
     NepalCaseSummaryModule,
+    FormsModule,
   ],
   providers: [],
   exports: [],

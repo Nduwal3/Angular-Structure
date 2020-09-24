@@ -6,6 +6,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 export const MATERIAL_IMPORT = [
   MatFormFieldModule,
@@ -16,4 +18,6 @@ export const MATERIAL_IMPORT = [
   MatSidenavModule,
   MatListModule,
   MatCardModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
 ];

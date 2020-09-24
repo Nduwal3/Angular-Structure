@@ -44,6 +44,12 @@ export class NepalCoronaService {
       .pipe(retry(1), catchError(this.errorHandle));
   }
 
+  getNepalCasesTimeline(): Observable<any> {
+    return this.http
+      .get(`${BASE_DATA_URL}${this.DNCIurl.casesTimeLine}`)
+      .pipe(retry(1), catchError(this.errorHandle));
+  }
+
   errorHandle({ error }) {
     if (error.error && error.message) {
       return throwError(error.message);
